@@ -3,10 +3,74 @@ import { Menus } from '@/types/menu';
 export const menuData: Menus[] = [
     {
         id: '0',
-        title: '系统首页',
+        title: '首页',
         index: '/dashboard',
         icon: 'Odometer',
     },
+
+    {
+        id: '2222',
+        title: 'JSON格式化',
+        index: '/111',
+        icon: 'Odometer',
+    },
+
+    {
+        id: '21',
+        title: 'URL编码/解码',
+        index: '/2',
+        icon: 'Odometer',
+    },
+
+    {
+        id: '22',
+        title: '二维码生成',
+        index: '/3',
+        icon: 'Odometer',
+    },
+
+    {
+        id: '23',
+        title: '色值转换',
+        index: '/4',
+        icon: 'Odometer',
+    },
+
+    {
+        id: '24',
+        title: '时间戳转换',
+        index: '/5',
+        icon: 'Odometer',
+    },
+
+    {
+        id: '25',
+        title: '加密解密',
+        index: '/6',
+        icon: 'Odometer',
+    },
+
+    {
+        id: '26',
+        title: '图片压缩',
+        index: '/7',
+        icon: 'Odometer',
+    },
+
+    {
+        id: '27',
+        title: '正则表达式',
+        index: '/8',
+        icon: 'Odometer',
+    },
+
+    {
+        id: '28',
+        title: 'API测试',
+        index: '/9',
+        icon: 'Odometer',
+    },
+
     {
         id: '1',
         title: '系统管理',

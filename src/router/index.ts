@@ -7,7 +7,7 @@ import 'nprogress/nprogress.css';
 const routes: RouteRecordRaw[] = [
     {
         path: '/',
-        redirect: '/dashboard',
+        redirect: '/urlencode',
     },
     {
         path: '/',
@@ -22,6 +22,26 @@ const routes: RouteRecordRaw[] = [
                     noAuth: true,
                 },
                 component: () => import(/* webpackChunkName: "dashboard" */ '../views/dashboard.vue'),
+            },
+
+            {
+                path: '/json',
+                name: 'json',
+                meta: {
+                    title: 'JSON格式化',
+                    noAuth: true,
+                },
+                component: () => import('../views/pages/json-format.vue'),
+            },
+
+            {
+                path: '/urlencode',
+                name: 'urlencode',
+                meta: {
+                    title: 'URL编码/解码',
+                    noAuth: true,
+                },
+                component: () => import('../views/pages/url-encode.vue'),
             },
             {
                 path: '/system-user',
@@ -280,7 +300,8 @@ router.beforeEach((to, from, next) => {
         next('/login');
     } else if (typeof to.meta.permiss == 'string' && !permiss.key.includes(to.meta.permiss)) {
         // 如果没有权限，则进入403
-        next('/403');
+        // next('/403');
+        next();
     } else {
         next();
     }

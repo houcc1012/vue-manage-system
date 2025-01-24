@@ -1,8 +1,8 @@
 <template>
   <div class="page-container">
-    <div>URL编码/解码</div>
-    <div>在线URL编码解码工具，支持中文和特殊字符</div>
-    <el-card style="width: 100%;">
+    <div style="align-self: flex-start;margin-bottom: 10px; font-size: larger; font-weight: bold;">URL编码/解码</div>
+    <div style="align-self: flex-start;">在线URL编码解码工具，支持中文和特殊字符</div>
+    <el-card style="width: 50%;">
       <div>输入内容</div>
       <el-input
         v-model="inputData"
@@ -67,17 +67,11 @@ const urlDecode = () => {
 .page-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
   width: 100%;
-}
-
-.content-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .content-item {
